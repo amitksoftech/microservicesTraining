@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: caching-service
+#  cache:
+#    type: redis
+#    redis:
+#      time-to-live: 10m
+#      cache-null-values: false
+#    redis:
+#      host:
+#      port: 
+server:
+  port: 9095
+      

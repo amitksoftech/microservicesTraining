@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: math-service
+  jackson:
+    serialization:
+      indent-output: true
+  config:
+    import: optional:configserver:http://localhost:8888
+server:
+  port: 9091    
+  
+management:
+#  server:
+#    port: 9000
+  endpoint:
+    health:
+      enabled: true
+    beans:
+      enabled: true
+    shutdown:
+      enabled: true  
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+eureka:
+  client:
+    enabled: false
+    service-url:
+      default-zone: http://localhost:8761/eureka
